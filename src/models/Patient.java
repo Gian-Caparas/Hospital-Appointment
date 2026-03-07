@@ -2,6 +2,7 @@ package models;
 
 public class Patient extends Person{
     private String patientId;
+    private MedicalRecord medicalRecord;
 
     public Patient(String name, int age, String gender, String ContactNumber, String patientId){
         super(name, age, gender, ContactNumber);
@@ -20,5 +21,18 @@ public class Patient extends Person{
     public String getPatientId() {
         return patientId;
     }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public MedicalRecord getMedicalRecord() {
+        return medicalRecord;
+    }
+
+    public void setMedicalRecord(MedicalRecord medicalRecord) {
+        this.medicalRecord = medicalRecord;
+    }
+    
     
 }

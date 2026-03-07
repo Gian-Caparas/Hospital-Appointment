@@ -1,5 +1,5 @@
 package models;
-
+// This class represents a person with basic attributes such
 public class Person {
     private String Name;
     private int Age;

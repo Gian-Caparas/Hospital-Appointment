@@ -13,8 +13,6 @@ public abstract class Person {
         this.ContactNumber = ContactNumber;
     }
 
-    public abstract void displayInfo();
-
     public String getName(){
         return Name;
     }
@@ -43,6 +41,6 @@ public abstract class Person {
         this.ContactNumber = ContactNumber;
     }
 
-
+    public abstract void displayInfo();
 
 }

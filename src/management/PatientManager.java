@@ -1,24 +1,25 @@
 package management;
 
 import models.Patient;
-import models.MedicalRecord;
+// import models.MedicalRecord;
 import java.util.ArrayList;
 
 public class PatientManager {
     
     private ArrayList<Patient> patients;
-    private int counter = 1; 
+    private int idCounter;    
+    // private int counter = 1; sayup
 
     public PatientManager() {
         this.patients = new ArrayList<>();
+        this.idCounter = 1;
+
     }
 
     
     public void addPatient(String name, int age, String gender, String contact) {
-        
-        String id = "P00" + counter; 
-        counter++;
-        
+        String id = "P" + idCounter; 
+        idCounter++;
         Patient newPatient = new Patient(name, age, gender, contact, id);
         patients.add(newPatient);
         System.out.println("Patient added: " + name + " (ID: " + id + ")");

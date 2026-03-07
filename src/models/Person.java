@@ -1,6 +1,6 @@
 package models;
 
-public class Person {
+public abstract class Person {
     private String Name;
     private int Age;
     private String Gender;
@@ -12,6 +12,8 @@ public class Person {
         this.Gender = Gender;
         this.ContactNumber = ContactNumber;
     }
+
+    public abstract void displayInfo();
 
     public String getName(){
         return Name;

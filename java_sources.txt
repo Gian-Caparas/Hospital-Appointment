@@ -1,0 +1,12 @@
+src\management\AppointmentManager.java
+src\management\DepartmentManager.java
+src\management\DoctorManager.java
+src\management\PatientManager.java
+src\models\Appointment.java
+src\models\Department.java
+src\models\Doctor.java
+src\models\Hospital.java
+src\models\Patient.java
+src\models\Person.java
+src\system\HospitalSystem.java
+src\utils\FileManager.java

@@ -1,0 +1,39 @@
+==========================================
+         APPOINTMENT RECORD               
+==========================================
+Date         : 2026-03-09
+Patient ID   : P001
+Patient Name : Gian
+Patient Age  : 20
+------------------------------------------
+Doctor ID    : D001
+Doctor Name  : Dr. Smith
+Department   : Cardiology
+==========================================
+
+==========================================
+         APPOINTMENT RECORD               
+==========================================
+Date         : 2026-03-09
+Patient ID   : P002
+Patient Name : Jay
+Patient Age  : 18
+------------------------------------------
+Doctor ID    : D003
+Doctor Name  : Dr. Johnson
+Department   : Pediatrics
+==========================================
+
+==========================================
+         APPOINTMENT RECORD               
+==========================================
+Date         : 2026-03-09
+Patient ID   : P003
+Patient Name : Ray
+Patient Age  : 29
+------------------------------------------
+Doctor ID    : D010
+Doctor Name  : Dr. Lim
+Department   : Dermatology
+==========================================
+

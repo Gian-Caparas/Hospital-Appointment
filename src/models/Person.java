@@ -13,33 +13,17 @@ public abstract class Person {
         this.ContactNumber = ContactNumber;
     }
 
-    public String getName(){
-        return Name;
-    }
-    public void setName(String Name){
-        this.Name = Name;
-    }
+    public String getName(){ return Name; }
+    public void setName(String Name){ this.Name = Name;}
 
-    public int getAge(){
-        return Age;
-    }
-    public void setAge(int Age){
-        this.Age = Age;
-    }
+    public int getAge(){ return Age; }
+    public void setAge(int Age){ this.Age = Age; }
 
-    public String getGender(){
-        return Gender;
-    }
-    public void setGender(String Gender){
-        this.Gender = Gender;
-    }
-
-    public String getContactNumber(){
-        return ContactNumber;
-    }
-    public void setContactNumber(String ContactNumber){
-        this.ContactNumber = ContactNumber;
-    }
+    public String getGender(){ return Gender;}
+    public void setGender(String Gender){ this.Gender = Gender; }
+    
+    public String getContactNumber(){ return ContactNumber; }
+    public void setContactNumber(String ContactNumber){ this.ContactNumber = ContactNumber; }
 
     public abstract void displayInfo();
 

@@ -1,31 +1,29 @@
 package management;
 
 import models.Patient;
-// import models.MedicalRecord;
 import java.util.ArrayList;
-
+import java.util.List;
 public class PatientManager {
-    
     private ArrayList<Patient> patients;
     private int idCounter;    
-    // private int counter = 1; sayup
 
     public PatientManager() {
         this.patients = new ArrayList<>();
         this.idCounter = 1;
-
+    }
+    
+    public Patient addPatient(String name, int age, String gender, String contact) {
+        String patientId = "P" + String.format("%03d", idCounter++);
+        Patient patient = new Patient(name, age, gender, contact, patientId);
+        patients.add(patient);
+        return patient;
     }
 
-    
-    public void addPatient(String name, int age, String gender, String contact) {
-        String id = "P" + idCounter; 
-        idCounter++;
-        Patient newPatient = new Patient(name, age, gender, contact, id);
-        patients.add(newPatient);
-        System.out.println("Patient added: " + name + " (ID: " + id + ")");
+    // Convenience overload used by the booking flow when optional details are not collected.
+    public Patient addPatient(String name, int age) {
+        return addPatient(name, age, "Not Specified", "N/A");
     }
 
-    
     public Patient searchPatientById(String id) {
         for (int i = 0; i < patients.size(); i++) {
             Patient p = patients.get(i);
@@ -36,30 +34,17 @@ public class PatientManager {
         return null; 
     }
 
+    public List<Patient> getPatients() { return patients; }
     
-    public void updatePatient(String id, String field, String value) {
-        Patient p = searchPatientById(id);
-        if (p != null) {
-            if (field.equalsIgnoreCase("contact")) {
-                p.setContactNumber(value);
-                System.out.println("Contact updated for " + id);
-            }
-        } else {
-            System.out.println("Patient not found!");
+    public void listPatients() {
+        if (patients.isEmpty()) {
+            System.out.println("  No patients registered.");
+            return;
         }
-    }
-
-    
-    public void linkMedicalRecord(String id, MedicalRecord record) {
-        Patient p = searchPatientById(id);
-        if (p != null) {
-            p.setMedicalRecord(record); 
-            System.out.println("Medical Record linked to " + id);
+        System.out.println("\n  ===== Registered Patients =====");
+        for (Patient p : patients) {
+            p.displayInfo();
+            System.out.println("  -------------------------------");
         }
-    }
-
-    
-    public ArrayList<Patient> getPatients() {
-        return patients;
     }
 }

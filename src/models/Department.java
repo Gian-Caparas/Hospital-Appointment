@@ -12,19 +12,15 @@ public class Department {
         this.doctors = new ArrayList<>(); 
     }
 
+    public String getDepartmentName() { return departmentName;}
+    public void setDepartmentName(String departmentName) { this.departmentName = departmentName; }
+
     // Adding a doctor to this specific department
     public void addDoctor(Doctor doctor) {
         this.doctors.add(doctor);
     }
 
-   
-    public String getDepartmentName() {
-        return departmentName;
-    }
-
-    public List<Doctor> getDoctors() {
-        return doctors;
-    }
+    public List<Doctor> getDoctors() { return doctors; }
     
     // It's like a helper who's in the department
     public void displayDepartmentInfo() {
